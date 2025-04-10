@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+RUN npm run build -- --output-path=dist/frontend
 
 # Serve using NGINX
 FROM nginx:alpine
