@@ -18,7 +18,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/dd_db
 
   frontend:
-    image: frontend.tar
+    image: crud-dd-task-mean-app_frontend:latest
     ports:
       - "80:80"
     depends_on:
