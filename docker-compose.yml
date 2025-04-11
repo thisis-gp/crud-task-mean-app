@@ -11,16 +11,16 @@ services:
   backend:
     build: ./backend
     ports:
-      - "5000:5000"
+      - "8080:8080"
     depends_on:
       - mongo
     environment:
-      - MONGO_URL=mongodb://mongo:27017/test
+      - MONGO_URL=mongodb://mongo:27017/dd_db
 
   frontend:
     image: frontend.tar
     ports:
-      - "3000:80"
+      - "80:80"
     depends_on:
       - backend
 
